@@ -5,6 +5,20 @@ public class MemberConstruct {
     int age;
     int grade;
 
+
+    MemberConstruct(String name, int age) {
+        // 아래 두 줄이 반복 되는 것 같다.
+        // 이때 this 키워드를 사용하면 된다.
+        // this.name = name;
+        // this.age = age;
+        // this.grade = 50;
+
+        // this 를 활용하여 생성자 내부에서 자신의 생성자를 호출할 수 있다.
+        // 🔥 this() this를 통한 생성자 호출은 생성자의 첫번째 줄에서만 호출할 수 있다.
+        // System.out.println("go"); // 이 줄이 있으면 컴파일 오류가 생성된다.
+        this(name, age, 50); // 첫번째 문장에서만 작성하기!!
+    }
+
     /**
      * 클래스 이름은 클래스의 이름과 같아야 한다.
      * 즉, 첫 글자가 대문자를 갖는다.
