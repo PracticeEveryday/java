@@ -10,6 +10,15 @@ public class StaticMain3 {
 
         Data3 data3 = new Data3("C");
         System.out.println("C.count = " + Data3.count);
+
+        // 인스턴스를 통한 접근
+        // 인스턴스로 접근해보고 스태틱이 있으면 그냥 메서드 영역 가서 접근을 해버린다.
+        // 인스턴스의 정적, 메서드 영역의 데이터를 쓰는 것이다!
+        Data3 data4 = new Data3("D");
+        System.out.println(data4.count); // 권장하지 않는다 << 인스턴스 변수인가? 라는 생각이 든다. << 오해의 소지가 있다.
+
+        // 클래스를 통한 접근
+        System.out.println(Data3.count);    // 보자마자 Static 변수인 것으로 보인다.
     }
 }
 

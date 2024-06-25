@@ -2,7 +2,7 @@ package static1;
 
 public class Data3 {
     public String name;
-    public static int count;
+    public static int count;    // 클래스에 소속되어 있는 것 처럼 보인다.
 
     Data3(String name){
         this.name = name;
@@ -14,4 +14,15 @@ public class Data3 {
 /**
  * static 은 결국 Class에서 관리하는 변수이다.
  * 클래스는 하나 밖에 존재하지 않는다. << 즉, 공용 변수인 것!
+ */
+
+/**
+ * 변수의 생명 주기
+ *
+ * 1. 지역 변수 > 스택 영역에 포함되며 스택 프레임이 제거 되면 사라진다. 짧은 생명 주기
+ * 2. 인스턴스 번수 > 힙 영역에 포함 되며 GC의 타깃이 될 때 사라진다. 긴 생명 주기
+ * 3. 클래스 변수 > JVM에 클래스가 로딩되는 순간 생성되고, JVM이 종료될 때 함께 사라진다. 가장 긴 생명 주기
+ *      키워드를 만나면 생명 주기가 시작되어 버린다.
+ *
+ * 정적 ?? 실행 시점에 생시고, 종료 시점에 제거 된다. 이름 그대로 정적으로 변하지 않고 쭉 간다.
  */
