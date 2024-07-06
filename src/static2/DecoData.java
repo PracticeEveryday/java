@@ -10,8 +10,8 @@ public class DecoData {
      * Class 영역에 속한 메서드가 스택 영역이나, 힙 영역의 주소를 알 길이 없다. 참조값을 알길이 없다!!
      */
     public static void staticCall() {
-        instanceValue++; // 인스턴스 변수 접근 시 compile error
-        instanceMethod(); // 인스턴스 method 접근 시 compile error
+//        instanceValue++; // 인스턴스 변수 접근 시 compile error
+//        instanceMethod(); // 인스턴스 method 접근 시 compile error
 
 
         staticValue++; // 정적 변수 접근 가능
